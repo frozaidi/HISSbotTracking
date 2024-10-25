@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Initialize Video Capture
-cap = cv2.VideoCapture('IMG_7936.mov')
+cap = cv2.VideoCapture('IMG_9130.mov')
 
 # Get the width, height, and frames per second (fps) of the video
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -10,7 +10,7 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = cap.get(cv2.CAP_PROP_FPS)
 
 # Define the codec and create VideoWriter object
-out = cv2.VideoWriter('bad_video_2.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+out = cv2.VideoWriter('sidewinding_cw_forward.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
 
 # Define the lower and upper bounds for the yellow color in HSV
 lower_yellow = np.array([28, 100, 100])

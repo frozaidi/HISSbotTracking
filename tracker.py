@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Initialize Video Capture
-cap = cv2.VideoCapture('IMG_7936.mov')
+cap = cv2.VideoCapture('IMG_9130.mov')
 
 # Get the width and height of the video frame
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -56,7 +56,7 @@ fig, ax = plt.subplots()
 ax.set_xlim(0, frame_width)  # Use video frame width for x-limit
 ax.set_ylim(0, frame_height)  # Use video frame height for y-limit
 ax.invert_yaxis()  # Invert the y-axis
-ax.set_title("Object Path with Increasing Line Width")
+# ax.set_title("Object Path with Increasing Line Width")
 ax.set_xlabel("X position")
 ax.set_ylabel("Y position")
 
