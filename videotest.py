@@ -6,7 +6,7 @@ video = cv2.VideoCapture("aruco_videos/CCW_rev_1.mp4")
 
 # Define video writer to save the output
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Define codec
-output_video = cv2.VideoWriter("test_video.mp4", fourcc, 30.0, 
+output_video = cv2.VideoWriter("test_video_3.mp4", fourcc, 30.0, 
                                (int(video.get(cv2.CAP_PROP_FRAME_WIDTH)), 
                                 int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))))
 
@@ -63,7 +63,8 @@ while video.isOpened():
 
             # Detect yellow in the ROI
             hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
-            lower_yellow, upper_yellow = np.array([20, 150, 150]), np.array([30, 255, 255])
+            # lower_yellow, upper_yellow = np.array([20, 150, 150]), np.array([30, 255, 255])
+            lower_yellow, upper_yellow = np.array([160, 100, 100]), np.array([179, 255, 255])
             yellow_mask = cv2.inRange(hsv_roi, lower_yellow, upper_yellow)
             contours, _ = cv2.findContours(
                 yellow_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
